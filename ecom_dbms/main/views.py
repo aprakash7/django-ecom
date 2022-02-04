@@ -28,7 +28,7 @@ def the_cart(request):
 
 	if request.user.is_authenticated:
 		#One to one relationship
-		customer= request.user.customer #check the name of the class
+		customer= request.user.customer
 		#if not ordered, create one
 		#Read docs
 		order, created= Order.objects.get_or_create(customer= customer, complete= False)
@@ -99,7 +99,6 @@ def updateItem(request):
 
 	return JsonResponse('Item was added', safe=False)
 
-#Processing the order
 def processOrder(request):
 	transaction_id = datetime.datetime.now().timestamp()
 	data = json.loads(request.body)

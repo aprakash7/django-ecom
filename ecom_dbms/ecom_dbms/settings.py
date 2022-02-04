@@ -81,6 +81,14 @@ WSGI_APPLICATION = 'ecom_dbms.wsgi.application'
 #can just delete the file
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+'''
+{
+    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dbms',
         'USER': 'ap',
@@ -89,7 +97,7 @@ DATABASES = {
         'PORT': '',
     }
 }
-
+'''
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 

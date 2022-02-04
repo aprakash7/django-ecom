@@ -80,11 +80,6 @@
 		document.getElementById('shipping-info').innerHTML = ''
 	}
 
-	if(user!= 'AnonymousUser'){
-		//hide name and email field if user is logged in
-		document.getElementById('user-info').innerHTML = ''
-	}
-
 	var form = document.getElementById('form')
 	form.addEventListener('submit',function(e){
 		e.preventDefault()
