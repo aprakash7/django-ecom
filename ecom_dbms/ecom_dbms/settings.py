@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ejkokn18cqdge^j^6$5%o$x&h7p48!vh0!=p3py(*pb(6+e^sj'
+SECRET_KEY = 'akanksha'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,14 +81,6 @@ WSGI_APPLICATION = 'ecom_dbms.wsgi.application'
 #can just delete the file
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-'''
-{
-    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dbms',
         'USER': 'ap',
@@ -97,7 +89,14 @@ DATABASES = {
         'PORT': '',
     }
 }
-'''
+
+'''{
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}'''
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
