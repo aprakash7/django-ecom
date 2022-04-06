@@ -11,7 +11,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ product.title }}</h5>
         <p class="card-text">{{ product.description }}</p>
-        <p class="card-text">Price - &#8377 {{ product.price|floatformat:2 }}</p> 
+        <p class="card-text">Price - &#8377 {{ product.product_price|floatformat:2 }}</p> 
         <hr>
 
         <button data-product={{product.id}} data-action="add" class=" btn btn-outline-secondary add-btn update-cart">Add to Cart</button>

@@ -3,10 +3,42 @@
 
 
 {% block content %}
-	<form method="POST" class= "form-group" style= "margin-left: 20px">
+<div class="container">
+	<form method="POST" style= "margin-left: 20px">
 		{% csrf_token %}
-		{{form |crispy}}
-		 <button type= "submit" class= "btn btn-success">Register</button>
+		
+		
+	        <div class= "form-group">
+		    <div class= "row">
+			<label>{{form.username.label}}</label></div>
+		    <div class= "row">
+			{{form.username}}</div>
+		</div>
+		
+		<div class= "form-group">
+		    <div class= "row">
+			<label>{{form.email.label}}</label></div>
+		    <div class="row">
+		    {{form.email}}</div>
+		</div>
+		
+		<div class= "form-group">
+		    <div class= "row">
+			<label>{{form.password1.label}}</label></div>
+		    <div class= "row">
+			{{form.password1}}</div>
+		</div>
+		
+		<div class= "form-group">
+		<div class= "row">
+		    <label>{{form.password2.label}}</label></div>	
+		<div class= "row">
+		    {{form.password2}}</div>
+		</div>
+
+		<button type= "submit" class= "btn btn-success">Register</button> 
 	</form>
+	
 	If you already have an account, <a href="/login"><strong>login</strong></a> instead.
+</div>
 {% endblock %}

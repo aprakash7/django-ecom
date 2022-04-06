@@ -28,7 +28,7 @@ class Product(models.Model):
 	title= models.CharField(verbose_name= "Title", max_length= 30)
 	image= models.ImageField(verbose_name= 'Product Image',upload_to= 'media', null=True, blank=True) #upload to media folder
 	description= models.CharField(verbose_name= "Description", max_length= 250)
-	price= models.DecimalField(verbose_name= "Price", decimal_places=2, max_digits= 6)
+	product_price= models.DecimalField(verbose_name= "Price", decimal_places=2, max_digits= 6)
 	date= models.DateTimeField(auto_now_add= True)
 
 	def _str__(self):
@@ -82,7 +82,7 @@ class OrderItem(models.Model):
 	@property
 	def get_total(self):
 		#product consists price
-		total= self.quantity * self.product.price
+		total= self.quantity * self.product.product_price
 		return total
 
 class Address(models.Model):
