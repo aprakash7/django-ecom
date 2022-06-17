@@ -84,8 +84,8 @@ def updateItem(request):
     productId = data["productId"]
     action = data["action"]
 
-    print("Action:", action)
-    print("productId:", productId)
+    # print("Action:", action)
+    # print("productId:", productId)
 
     # creates cutomer and order if not created
 
